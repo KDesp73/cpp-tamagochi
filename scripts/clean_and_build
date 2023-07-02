@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+./scripts/clean
+./scripts/build
