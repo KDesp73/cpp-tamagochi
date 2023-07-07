@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+directory="./build"
+
+for file in "$directory"/*; do
+    if [[ -x "$file" ]] ; then
+        echo "Executable file found: $file"
+        echo "Running executable..."
+        "$directory/$file"
+    fi
+done
