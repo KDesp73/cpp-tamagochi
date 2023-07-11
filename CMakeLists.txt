@@ -2,12 +2,14 @@ cmake_minimum_required(VERSION 3.5)
 project(YourProjectName)
 
 # Set C++ standard
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
+
+# Include directories
+include_directories(directory_name)
 
 # Add your source files
 set(SOURCES
     src/main.cpp
-
 )
 
 # Add your header files
@@ -22,8 +24,6 @@ set(TESTS
 # Add an executable target
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${TESTS})
 
-# Include directories
-target_include_directories(${PROJECT_NAME} PRIVATE include)
 
 # Add any additional libraries or dependencies
 # Example:
