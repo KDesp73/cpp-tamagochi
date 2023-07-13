@@ -10,11 +10,12 @@
 ├── README.md
 ├── scripts
 │   ├── build
+│   ├── build_and_run
 │   ├── clean
-│   └── clean_and_build
+│   ├── clean_and_build
+│   ├── remove_submodule
+│   └── run
 ├── src
 │   └── main.cpp
 └── tests
     └── test.cpp
-
-```
