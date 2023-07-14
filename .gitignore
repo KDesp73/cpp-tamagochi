@@ -1,3 +1,7 @@
+# Directories
+build/
+scripts/
+
 # Prerequisites
 *.d
 
@@ -30,3 +34,7 @@
 *.exe
 *.out
 *.app
+
+# Archives
+*.zip
+*.rar
