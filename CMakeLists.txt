@@ -3,9 +3,10 @@ project(YourProjectName)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Include directories
-include_directories(directory_name)
+include_directories(include)
 
 # Add your source files
 set(SOURCES
