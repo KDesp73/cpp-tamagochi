@@ -5,6 +5,8 @@
 ```
 .
 ├── CMakeLists.txt
+├── .editorconfig
+├── .gitignore
 ├── include
 │   └── header.h
 ├── README.md
