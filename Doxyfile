@@ -1,0 +1,41 @@
+# Doxyfile for C++ project documentation in Markdown format
+
+# Set the project name and version.
+PROJECT_NAME = "YourProjectName"
+PROJECT_VERSION = "1.0"
+
+# Set the directory where the documentation will be generated.
+OUTPUT_DIRECTORY = docs
+
+# Use Markdown output format.
+GENERATE_DOCSET = NO
+GENERATE_HTML = NO
+GENERATE_MAN = NO
+GENERATE_RTF = NO
+GENERATE_XML = NO
+GENERATE_TAGFILE = NO
+GENERATE_MD = YES
+
+# Specify the input directories containing your source code.
+INPUT = src include
+
+# Set the file patterns to include in the documentation.
+FILE_PATTERNS = *.cpp *.h
+
+# Exclude any directories or files that you don't want to include in the documentation.
+EXCLUDE = 
+
+# Use Doxygen's default Markdown stylesheet.
+MARKDOWN_SUPPORT = YES
+MARKDOWN_EXTENSIONS = md
+MARKDOWN_STYLESHEET = 
+
+# Other settings you may want to customize:
+# - EXCLUDE_PATTERNS: Add patterns to exclude specific files.
+# - INPUT_FILTER: You can use filters to exclude or include specific parts of files.
+# - OUTPUT_LANGUAGE: Set the output language (English by default).
+# - GENERATE_LATEX: Generate LaTeX output alongside Markdown (if needed).
+
+# ... (Other settings as per your project requirements) ...
+
+
