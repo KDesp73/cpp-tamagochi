@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(YourProjectName)
+project(Tamagochi)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 14)
@@ -8,14 +8,26 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Include directories
 include_directories(include)
 
+add_subdirectory(Cli-Kit)
+include_directories(Cli-Kit)
+
+
 # Add your source files
 set(SOURCES
     src/main.cpp
+    src/tamagochi.cpp
+    src/utils.cpp
 )
 
 # Add your header files
 set(HEADERS
-    include/header.h
+    include/tamagochi.h
+    include/burger.h
+    include/cake.h
+    include/food.h
+    include/status.h
+    include/utils.h
+    include/ui.h
 )
 
 set(TESTS
@@ -25,6 +37,7 @@ set(TESTS
 # Add an executable target
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${TESTS})
 
+target_link_libraries(${PROJECT_NAME} CliKit)
 
 # Add any additional libraries or dependencies
 # Example:
