@@ -3,7 +3,7 @@
 #include "food.h"
 #include "status.h"
 
-class Burger : Food {
+class Burger : public Food {
 public:
 	Burger() : Food(){
 		this->type = "Burger";

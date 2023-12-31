@@ -17,6 +17,7 @@ set(SOURCES
     src/main.cpp
     src/tamagochi.cpp
     src/utils.cpp
+    src/ui.cpp
 )
 
 # Add your header files

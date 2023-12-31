@@ -1,4 +1,5 @@
 #include "utils.h"
+#include "actions.h"
 #include "status.h"
 #include <iostream>
 #include <string>
@@ -40,6 +41,28 @@ string Utils::status_to_string(Status status){
 			return "Dirty";
 		default:
 			std::cerr << "Unknown status" << endl;
+			return "error";
+	}
+}
+
+string Utils::action_to_string(Action action){
+	switch (action) {
+        case Action::Feed:
+			return "Feed";
+        case Action::Sleep:
+			return "Sleep";
+        case Action::Clean:
+			return "Clean";
+        case Action::Discipline:
+			return "Discipline";
+		case Action::Exit:
+			return "Exit";
+		case Action::Progress:
+			return "Progress";
+		case Action::Default:
+			return "Default";
+		default:
+			std::cerr << "Unknown action" << endl;
 			return "error";
 	}
 }

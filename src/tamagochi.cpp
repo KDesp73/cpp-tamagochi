@@ -72,3 +72,8 @@ string Tamagochi::to_string(){
 
 	return str;
 }
+
+void Tamagochi::progress(){
+	this->time++;
+}
+
