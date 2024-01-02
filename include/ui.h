@@ -6,4 +6,5 @@
 namespace UI {
 	Action handleKeys();
 	void render(Tamagochi *tamagochi);
+	void clearRender();
 };

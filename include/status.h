@@ -8,5 +8,6 @@ enum class Status {
 	Happy,
 	Sad,
 	Clean,
-	Dirty
+	Dirty,
+	Dead
 };

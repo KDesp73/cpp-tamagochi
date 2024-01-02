@@ -39,6 +39,8 @@ string Utils::status_to_string(Status status){
 			return "Clean";
 		case Status::Dirty:
 			return "Dirty";
+		case Status::Dead:
+			return "Dead";
 		default:
 			std::cerr << "Unknown status" << endl;
 			return "error";
