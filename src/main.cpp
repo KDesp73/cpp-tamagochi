@@ -103,7 +103,7 @@ void start(Tamagochi *tamagochi){
 }
 
 void selectSkin(Tamagochi *tamagochi){
-	int skin = Menu::menu("Select pet", 2, {"Dave", "ChatGPT", "Back"});
+	int skin = Menu::menu(Text::green + "Select pet" + Text::normal, 2, {"Dave", "ChatGPT", "Back"});
 
 	// TODO: change to absolute path
 	switch (skin) {
@@ -124,7 +124,7 @@ int main(int argc, char **argv){
 	while (true) {
 		Tamagochi *tamagochi = new Tamagochi(pet_path);
 
-		int choice = Menu::menu(Text::red + "Tamagochi" + Text::normal, 1, {"Start", "Pet", "Exit"});
+		int choice = Menu::menu(Text::red + "Tamagochi" + Text::normal, 1, {"Start", "Select Pet", "Exit"});
 		switch (choice) {
 			case 0:
 				tamagochi->add_status(Status::Happy);
