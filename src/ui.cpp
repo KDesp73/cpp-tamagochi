@@ -54,7 +54,9 @@ Action UI::handleKeys() {
 			case ' ':
 				action = Action::Progress;
 				break;
-            default: cout << "Invalid Action\n";
+            default: 
+				// cout << "Invalid Action\n";
+				break;
         }
 	return action;
 }

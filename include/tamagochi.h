@@ -16,6 +16,9 @@ public:
 
 	~Tamagochi() = default;
 	Tamagochi() = default;
+	Tamagochi(std::string pixelart_path) {
+		this->pixelart_path = pixelart_path;
+	}
 
 	void print();
 	void feed(Food food);
@@ -29,7 +32,9 @@ public:
 	std::string status_to_string();
 	int getTime() {return time;}
 	void checkTime();
+	void setPixelartPath(std::string path) {this->pixelart_path = path;}
 private: 
+	std::string pixelart_path = "./pixelart/dave/";
 	int health = 100;
 	int time = 0;
 

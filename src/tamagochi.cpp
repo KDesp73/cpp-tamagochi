@@ -65,12 +65,11 @@ void Tamagochi::clean(){
 }
 
 void Tamagochi::print(){
-	// TODO: change to absolute path
-	std::string happy = CliKit::Files::readFile("./pixelart/happy");
-	std::string sad = CliKit::Files::readFile("./pixelart/sad");
-	std::string sleepy = CliKit::Files::readFile("./pixelart/sleepy");
-	std::string hungry = CliKit::Files::readFile("./pixelart/hungry");
-	std::string dead = CliKit::Files::readFile("./pixelart/dead");
+	std::string happy = CliKit::Files::readFile(this->pixelart_path + "happy");
+	std::string sad = CliKit::Files::readFile(this->pixelart_path + "sad");
+	std::string sleepy = CliKit::Files::readFile(this->pixelart_path + "sleepy");
+	std::string hungry = CliKit::Files::readFile(this->pixelart_path + "hungry");
+	std::string dead = CliKit::Files::readFile(this->pixelart_path + "dead");
 
 	if(this->status.count(Status::Sad)){
 		std::cout << sad << std::endl;
