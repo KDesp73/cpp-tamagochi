@@ -1,23 +1,40 @@
-# CPP-Project-Template
+# cpp-tamagochi
 
-## Tree
+A tamagochi written in C++ with a command line interface
 
 ```
-.
-├── CMakeLists.txt
-├── .editorconfig
-├── .gitignore
-├── include
-│   └── header.h
-├── README.md
-├── scripts
-│   ├── build
-│   ├── build_and_run
-│   ├── clean
-│   ├── clean_and_build
-│   ├── remove_submodule
-│   └── run
-├── src
-│   └── main.cpp
-└── tests
-    └── test.cpp
+   ██████████
+  █          █
+ █    ██   ██ █
+█             ██
+█     █         █
+█      ██████████
+██             █
+█  █ █        █
+█  █ █        █
+█   █         █
+ █           █
+  █ █████ ███
+  █ █   █ █ 
+  ███   ███
+
+```
+
+## Status
+
+- Happy
+- Sad
+- Clean
+- Dirty
+- Full
+- Hungry
+- Energized
+- Sleepy
+- Dead
+
+## Actions
+
+- Feed
+- Sleep
+- Clean
+- Progress
