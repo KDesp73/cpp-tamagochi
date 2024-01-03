@@ -109,10 +109,10 @@ void selectSkin(Tamagochi *tamagochi){
 	// TODO: change to absolute path
 	switch (skin) {
 		case 0:
-			pet_path = Utils::getProjectPath() + "/dave/";
+			pet_path = Utils::getProjectPath() + "ascii-art/dave/";
 			break;
 		case 1:
-			pet_path = Utils::getProjectPath() + "/chatgpt/";
+			pet_path = Utils::getProjectPath() + "ascii-art/chatgpt/";
 			break;
 		case 2:
 			break;

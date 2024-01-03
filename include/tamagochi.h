@@ -2,6 +2,7 @@
 
 #include "food.h"
 #include "status.h"
+#include "utils.h"
 #include <string>
 #include <unordered_set>
 
@@ -34,7 +35,7 @@ public:
 	void checkTime();
 	void setPixelartPath(std::string path) {this->pixelart_path = path;}
 private: 
-	std::string pixelart_path = "./pixelart/dave/";
+	std::string pixelart_path = Utils::getProjectPath() + "ascii-art/dave/";
 	int health = 100;
 	int time = 0;
 
