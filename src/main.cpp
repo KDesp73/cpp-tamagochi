@@ -105,13 +105,14 @@ void start(Tamagochi *tamagochi){
 void selectSkin(Tamagochi *tamagochi){
 	int skin = Menu::menu(Text::green + "Select pet" + Text::normal, 2, {"Dave", "ChatGPT", "Back"});
 
+
 	// TODO: change to absolute path
 	switch (skin) {
 		case 0:
-			pet_path = "./pixelart/dave/";
+			pet_path = Utils::getProjectPath() + "/dave/";
 			break;
 		case 1:
-			pet_path = "./pixelart/chatgpt/";
+			pet_path = Utils::getProjectPath() + "/chatgpt/";
 			break;
 		case 2:
 			break;
@@ -119,8 +120,6 @@ void selectSkin(Tamagochi *tamagochi){
 }
 
 int main(int argc, char **argv){
-
-
 	while (true) {
 		Tamagochi *tamagochi = new Tamagochi(pet_path);
 

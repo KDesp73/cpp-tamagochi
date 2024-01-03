@@ -10,4 +10,6 @@ namespace Utils {
 	string get_current_time();
 	string status_to_string(Status status);
 	string action_to_string(Action action);
+	string getProjectPath();
+	string getExecutablePath();
 };

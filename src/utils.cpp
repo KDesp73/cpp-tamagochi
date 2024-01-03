@@ -2,9 +2,18 @@
 #include "actions.h"
 #include "status.h"
 #include <iostream>
+#include <linux/limits.h>
 #include <string>
 #include <ctime>
 
+#include <cstdio>
+#include <cstring>
+
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 using namespace std;
 
 string Utils::get_current_time(){
@@ -67,4 +76,40 @@ string Utils::action_to_string(Action action){
 			std::cerr << "Unknown action" << endl;
 			return "error";
 	}
+}
+
+string removeSubstring(string originalString, string substringToRemove) {
+    size_t startPos = originalString.find(substringToRemove);
+    while (startPos != std::string::npos) {
+        originalString.erase(startPos, substringToRemove.length());
+        startPos = originalString.find(substringToRemove, startPos);
+    }
+
+	return originalString;
+}
+
+std::string Utils::getExecutablePath() {
+#if defined(_WIN32)
+    char buffer[MAX_PATH];
+    GetModuleFileName(nullptr, buffer, MAX_PATH);
+    return std::string(buffer);
+#elif defined(__linux__) || defined(__APPLE__)
+    char buffer[PATH_MAX];
+    ssize_t len = readlink("/proc/self/exe", buffer, sizeof(buffer) - 1);
+    if (len != -1) {
+        buffer[len] = '\0';
+        return std::string(buffer);
+    }
+#endif
+    return "";
+}
+
+string Utils::getProjectPath(){
+	std::string executablePath = getExecutablePath();
+	size_t lastSeparatorPos = executablePath.find_last_of("\\/");
+	if (lastSeparatorPos != std::string::npos) {
+		return removeSubstring(executablePath.substr(0, lastSeparatorPos), "build");
+	}
+
+	return "";
 }
