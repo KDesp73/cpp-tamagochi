@@ -11,7 +11,7 @@ BUILD_DIR := build
 CMAKE_BUILD_DIR := $(BUILD_DIR)
 
 # Specify the name of the executable
-TARGET := tamagochi
+TARGET := Tamagochi
 
 # CMake command
 CMAKE := cmake
