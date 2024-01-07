@@ -14,7 +14,7 @@
 
 using namespace CliKit;
 
-std::string pet_path = "./pixelart/dave/";
+std::string pet_path = "./ascii-art/dave/";
 
 void timer(Tamagochi *tamagochi){
 	while(true){
