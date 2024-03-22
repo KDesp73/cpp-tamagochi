@@ -1,6 +1,6 @@
 # cpp-tamagochi
 
-A tamagochi written in C++ with a command line interface
+A tamagochi written in C++ with a terminal user interface
 
 ```
    ██████████
